@@ -1,0 +1,47 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.title-section {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: rgb(167, 31, 31);
+    width: 20%;
+}
+
+.cards-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px dotted lightgray;
+    margin: 5% 25%;
+    background-color:lightgreen
+}
+
+.placeholder-card {
+    padding: 3%;
+    border: 3px darkgray dashed;
+    margin: 1%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span p {
+    color: red;
+}
+
+.shuffle-button {
+    display: block;
+    margin: 2% auto;
+}
+
+.shuffle-container {
+    width: 100%;
+}
