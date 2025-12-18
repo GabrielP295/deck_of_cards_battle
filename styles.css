@@ -27,9 +27,8 @@ body {
 .cards-display {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     border: 2px solid lightgray;
-    margin: 0% 20% 5% 20%;
+    margin: 0% 25% 5% 25%;
     background-color: rgba(39, 34, 34, 0.822);
 }
 
