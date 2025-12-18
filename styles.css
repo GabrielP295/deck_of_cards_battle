@@ -10,21 +10,31 @@ body {
     display: flex;
     justify-content: center;
     margin: auto;
-    background-color: rgb(167, 31, 31);
+    background-color: rgba(167, 31, 31, 0.975);
     width: 20%;
+    border:1px, solid, rgb(167, 31, 31);
+    border-radius: 5px;
+    padding: 1.5vh;
+}
+
+.player-label {
+    display:flex;
+    justify-content:center;
+    margin: 4% 0% 1% 0%;
+    font-weight: 650;
 }
 
 .cards-display {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border: 2px dotted lightgray;
-    margin: 5% 25%;
-    background-color:lightgreen
+    border: 2px solid lightgray;
+    margin: 0% 20% 5% 20%;
+    background-color: rgba(39, 34, 34, 0.822);
 }
 
 .placeholder-card {
-    padding: 3%;
+    padding: 0.5%;
     border: 3px darkgray dashed;
     margin: 1%;
     height: 8rem;
@@ -33,15 +43,31 @@ body {
     align-items: center;
 }
 
-span p {
-    color: red;
+span img {
+    height:100%;
 }
 
 .shuffle-button {
     display: block;
     margin: 2% auto;
+    color: white;
+    background-color: black;
+    border: 1px solid rgb(167, 31, 31);
+    border-radius: 5px;
+    width: 15%;
+    height: 100%;
+}
+
+.shuffle-button:hover {
+    background-color: rgba(31, 29, 29, 0.9);
 }
 
 .shuffle-container {
     width: 100%;
+    height: 7.54vh;
+}
+
+.winner-container {
+    display:flex;
+    justify-content:center;
 }

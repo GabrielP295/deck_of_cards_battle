@@ -1,7 +1,7 @@
 class Deck {
     cards = [];
-    suites = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
-    numbers = [2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
+    suites = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
+    numbers = ["A",2,3,4,5,6,7,8,9,10,'J','Q','K'];
 
     constructor(){
         this.initCards();
@@ -37,11 +37,12 @@ class Deck {
 class Card {
     number = "";
     suit = "";
-    url = undefined;
+    url = 0;
 
     constructor(number, suit) {
         this.number = number;
         this.suit = suit;
+        this.url += 1;
     }
 }
 
@@ -61,19 +62,23 @@ class Player {
 
 }
 
-//ask chatGPT why the neccessity of all the this keywords in javascript vs java
-//ask why am I still confused and how do i overcome being stuck in the java mindset
-//even tho the topics are the same
-//ask for a general guideline of how to proceed from here using the DOM API
+function gameRound() {
+    var myDeck = new Deck();
+    var player1 = new Player('Player 1');
+    var player2 = new Player('Player 2');
+    player1.addToHand(myDeck);
+    player1.addToHand(myDeck);
+    player1.addToHand(myDeck);
+    player2.addToHand(myDeck);
+    player2.addToHand(myDeck);
+    player2.addToHand(myDeck);
+}
 
-//implement function that runs a game of the deck of cards and connects to UI
+function onButton() {
+    document.getElementById("match-summary").innerHTML = "It works!!!";
+}
 
-var myDeck = new Deck();
-
-var player1 = new Player('Player 1');
-var player2 = new Player('Player 2');
-
-player1.addToHand(myDeck);
-player1.addToHand(myDeck);
-player1.addToHand(myDeck);
-console.log(player1.hand);
+document.addEventListener("DOMContentLoaded", function() {
+    var button = document.querySelector(".shuffle-button");
+    button.addEventListener("click", onButton);
+});
